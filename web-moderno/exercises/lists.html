@@ -1,0 +1,54 @@
+<h1> Lists </h1>
+
+<!-- Ordered list -->
+<ol>
+    <li> List item 1 </li>
+    <li> List item 2 </li>
+    <li> List item 3 </li>
+</ol>
+
+<!-- Unordered list -->
+<ul>
+    <li> List item 1 </li>
+    <li> List item 2 </li>
+    <li> List item 3 </li>
+</ul>
+
+<!-- Definition lists -->
+<dl>
+    <dt> Definition term 1 </dt>
+    <dd> Definition description 1 </dd>
+    <dt> Definition term 2 </dt>
+    <dd> Definition description 2 </dd>
+</dl>
+
+<!-- Unordered list with nested lists -->
+<ul class=tree>
+    <li>
+        <span wn-folder> Backend </span>
+        <ul>
+            <li> PHP </li>
+            <li> Python </li>
+            <li> Java </li>
+        </ul>
+    </li>
+    <span wn-folder> Frontend </span>
+    <ul>
+        <li> JavaScript </li>
+        <li> HTML </li>
+        <li> CSS </li>
+    </ul>
+    </li>
+</ul>
+
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+
+<script>
+    document.querySelectorAll('[wn-folder]').forEach(folder => {
+        folder.onclick = function (e) {
+            const ul = folder.nextElementSibling
+            const ulDisplay = ul.style.display 
+            ul.style.display = ulDisplay === 'none' ? 'block' : 'none'
+        }
+    })
+</script>
