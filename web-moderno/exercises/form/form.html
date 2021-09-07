@@ -1,5 +1,37 @@
 <h1>Form</h1>
 <form action="http://localhost:3003/users" method="post">
     <input type="txt" name="name">
+    <input type="password" name="password">
+    <textarea name="bio" cols="30" rows="10"></textarea>
+    <input type="radio" name="gender" value="female"> Female
+    <input type="radio" name="gender" value="male"> Male<br>
+    <input type="checkbox" name="newsletter" value="newsletter"> Newsletter
+    <select name="State">
+        <option value="SP">São Paulo</option>
+        <option value="RJ">Rio De Janeiro</option>
+        <option value="MG">Minas Gerais</option>
+    </select>
+    <select name="Interests" multiple>
+        <option value="js">JavaScript</option>
+        <option value="py">Python</option>
+        <option value="go">GoLang</option>
+        <option value="sh">Bash</option>
+    </select>
+    <br><br>
     <button type="submit">Submit</button>
+    <br><br>
 </form>
+
+<style>
+    input,
+    select,
+    textarea {
+        display: block;
+        margin: 10px 0;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+        display: inline;
+    }
+</style>
