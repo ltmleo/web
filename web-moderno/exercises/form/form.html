@@ -1,5 +1,6 @@
 <h1>Form</h1>
-<form action="http://localhost:3003/users" method="post">
+<form method="post">
+    <input type="hidden" name="id" value="3">
     <input type="txt" name="name">
     <input type="password" name="password">
     <textarea name="bio" cols="30" rows="10"></textarea>
@@ -18,7 +19,8 @@
         <option value="sh">Bash</option>
     </select>
     <br><br>
-    <button type="submit">Submit</button>
+    <button type="submit" formaction="http://localhost:3003/users">Submit</button><br>
+    <button type="submit" formaction="http://localhost:3003/users/3">Change</button>
     <br><br>
 </form>
 
