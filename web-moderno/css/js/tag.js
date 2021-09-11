@@ -9,7 +9,7 @@ const colors = {
     nav: '#3g51b5',
     main: '#3h42b5',
     footer: '#3f51b5',
-    form: '#1e35b1',
+    form: '#1e35c1',
     body: '#3e35b1',
     default: '#616161',
     get(tag) {
