@@ -1,15 +1,41 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Conceitos Básicos</title>
     <link rel="stylesheet" href="/css/estilo.css">
     <script src="/js/vue.min.js"></script>
 </head>
+
 <body class="exercicio">
+    <div id="app">
+        <p>1) {{2 + 2}}</p>
+        <p>2) {{ "teste".toUpperCase() }} </p>
+        <p>3) Ola {{ nome }}!!!</p>
+        <p>4) Ano Atual: {{ anoAtual() }}</p>
+        <p>5) Idade: {{ idade }}</p>
+    </div>
 
     <script>
-        // ...
+        new Vue({
+            el: '#app',
+            data: {
+                nome: 'Leo',
+                anoNascimento: '1994'
+            },
+            methods: {
+                anoAtual() {
+                    return new Date().getFullYear()
+                }
+            },
+            computed: {
+                idade() {
+                    return this.anoAtual() - this.anoNascimento
+                }
+            }
+        })
     </script>
 </body>
+
 </html>
